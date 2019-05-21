@@ -7,5 +7,6 @@ IoT training May 2019 at Strathmore, resources, starter files, instructions, cod
 
 ## Softwares to Install
 - To get up and running please install the following softwares on your computer
-    - NodeJs
-    - Git
+    - NodeJs - https://nodejs.org/en/download/
+    - Git -https://git-scm.com/downloads
+    - VS Code - https://code.visualstudio.com/download
