@@ -10,3 +10,4 @@ IoT training May 2019 at Strathmore, resources, starter files, instructions, cod
     - NodeJs - https://nodejs.org/en/download/
     - Git -https://git-scm.com/downloads
     - VS Code - https://code.visualstudio.com/download
+    - Yarn - https://yarnpkg.com/en/

@@ -30,7 +30,8 @@ This means that in the browser, JavaScript can change the way the webpage (DOM) 
 - **Symbol** - (new in ECMAScript 2015). A data type whose instances are unique and immutable.
 - **Object** - This is a reference data type used to define collections of data - Date,RegExp,Math
 
-We can get the type of a variable using typeof
+-We can get the type of a variable using typeof
+-In computer science, aliteral is anotation representing a fixed value in the source code
 
 ## Operators
 
@@ -67,6 +68,10 @@ We can get the type of a variable using typeof
 - for...in
 - for.. of
 
+## template literals
+
+- Template literals are string literals allowing embedded expressions
+
 ## Arrays
 
 - An array is an ordered set of values that you refer to with a name and an index.
@@ -95,7 +100,7 @@ We can get the type of a variable using typeof
 - function declaration/function definition/function statement
 - function expressions
 - calling functions
-- function scope - discussion on scope
+- function scope - discussion on scope - scope defines the lifetime and visibility of a variable. Variables are not visible outside the scope in which they are declared.
 - function parameters -default parameters,rest parameters
 - Arrow Functions
 
@@ -109,3 +114,15 @@ We can get the type of a variable using typeof
   - A set of integer values for year, month, day, hour, minute, and seconds. For example, var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);.
 
 ## Object Literals
+
+- In object literal notation, an object description is a set of comma-separated name/value pairs inside curly braces. The names can be identifiers or strings followed by a colon.
+
+## JavaScript Modules and Packages
+- A module is a JavaScript file that exports one or more values(objects,functions or variables) using the export keyword. Modules can be loaded by the Node.js require() function
+    - Inbuilt Modules
+    - ThirdParty Modules
+    - Own Modules
+- A package is a directory/folder containing a program described by a package.json file. A package usually contains one or more Node modules.
+- npm init/yarn init command initializes a folder as a package with a package.json, any third party modules installed will be inside a node_modules folder in this folder
+
+## Creating Object using ES6 Classes (Maybe)
