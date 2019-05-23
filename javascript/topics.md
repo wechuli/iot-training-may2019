@@ -32,6 +32,7 @@ This means that in the browser, JavaScript can change the way the webpage (DOM) 
 
 -We can get the type of a variable using typeof
 -In computer science, aliteral is anotation representing a fixed value in the source code
+-Comments // /\* \*/
 
 ## Operators
 
@@ -117,11 +118,29 @@ This means that in the browser, JavaScript can change the way the webpage (DOM) 
 
 - In object literal notation, an object description is a set of comma-separated name/value pairs inside curly braces. The names can be identifiers or strings followed by a colon.
 
+## JSON
+
+- JavaScript Object Notation (JSON) is a standard text-based format for representing structured data based on JavaScript object syntax. It is commonly used for transmitting data in web applications (e.g., sending some data from the server to the client, so it can be displayed on a web page, or vice versa).
+- Even though it closely resembles JavaScript object literal syntax, it can be used independently from JavaScript, and many programming environments feature the ability to read (parse) and generate JSON.JSON exists as a string — useful when you want to transmit data across a network. It needs to be converted to a native JavaScript object when you want to access the data. This is not a big issue — JavaScript provides a global JSON object that has methods available for converting between the two.A JSON object can be stored in its own file, which is basically just a text file with an extension of .json
+
+### Arrays JSON
+
+- an array is also valid JSON, in this case each element is the array must be wraped around the {} braces(you still need to follow JSON rules)
+
+### Special Nuances of JSON
+
+- JSON is purely a data format — it contains only properties, no methods.
+- JSON requires double quotes to be used around strings and property names. Single quotes are not valid.
+- Even a single misplaced comma or colon can cause a JSON file to go wrong, and not work
+- JSON can actually take the form of any data type that is valid for inclusion inside JSON, not just arrays or objects. So for example, a single string or number would be a valid JSON object
+- Unlike in JavaScript code in which object properties may be unquoted, in JSON, only quoted strings may be used as properties.
+
 ## JavaScript Modules and Packages
+
 - A module is a JavaScript file that exports one or more values(objects,functions or variables) using the export keyword. Modules can be loaded by the Node.js require() function
-    - Inbuilt Modules
-    - ThirdParty Modules
-    - Own Modules
+  - Inbuilt Modules
+  - ThirdParty Modules
+  - Own Modules
 - A package is a directory/folder containing a program described by a package.json file. A package usually contains one or more Node modules.
 - npm init/yarn init command initializes a folder as a package with a package.json, any third party modules installed will be inside a node_modules folder in this folder
 
