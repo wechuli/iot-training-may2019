@@ -28,6 +28,7 @@ This means that in the browser, JavaScript can change the way the webpage (DOM) 
 - **BigInt** - An integer with arbitrary precision
 - **String** - A sequence of characters that represent a text value
 - **Symbol** - (new in ECMAScript 2015). A data type whose instances are unique and immutable.
+
 - **Object** - This is a reference data type used to define collections of data - Date,RegExp,Math
 
 -We can get the type of a variable using typeof
