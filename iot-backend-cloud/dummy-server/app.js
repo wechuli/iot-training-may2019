@@ -12,7 +12,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use((req, res) => {
+  const { temprature, humidity } = req.body;
   console.log(req.body);
+  console.log(temprature);
+  console.log(humidity);
+
   res.status(404).json({ error: "No route found" });
 });
 
