@@ -11,13 +11,17 @@ app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use((req, res) => {
+app.use("/dummy", (req, res) => {
   const { temprature, humidity } = req.body;
   console.log(req.body);
   console.log(temprature);
   console.log(humidity);
 
-  res.status(404).json({ error: "No route found" });
+  res.status(200).json({ message: "Data succesfully posted" });
+});
+
+app.use((req, res) => {
+  res.status(404).json({ error: "No Route found" });
 });
 
 app.listen(5900, (req, res) => {
