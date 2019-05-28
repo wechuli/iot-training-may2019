@@ -1,4 +1,6 @@
 const axios = require("axios");
+const express = require('express');
+
 
 const MAXIMUM_TEMP = 30;
 const MINIMUM_TEMP = 20;
@@ -10,6 +12,7 @@ function dummyDevice() {
     const randomTemp = 25;
     const randomHumi = 24;
 //   console.log("Strange stuff");
+
   axios
     .post("http://un-habitat-backend.azurewebsites.net", { temp: randomTemp, humidity: randomHumi })
     .then(response => console.log(response.data))
@@ -17,9 +20,8 @@ function dummyDevice() {
 }
 
 
-
 setInterval(() => {
   dummyDevice();
-}, 3000);
+}, 10000);
 
 
