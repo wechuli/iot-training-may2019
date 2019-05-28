@@ -5,9 +5,10 @@ const MINIMUM_TEMP = 20;
 const MAXIMUM_HUMIDITY = 100;
 const MINIMUM_HUMIDITY = 10;
 
+
 function dummyDevice() {
-    const randomTemp = 
-    const randomHumi = 
+    const randomTemp = 25;
+    const randomHumi = 24;
 //   console.log("Strange stuff");
   axios
     .post("http://un-habitat-backend.azurewebsites.net", { temp: randomTemp, humidity: randomHumi })
@@ -15,6 +16,10 @@ function dummyDevice() {
     .catch(error => console.log(error));
 }
 
+
+
 setInterval(() => {
   dummyDevice();
 }, 3000);
+
+
