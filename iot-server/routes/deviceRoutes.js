@@ -4,7 +4,7 @@ const {
   getAllDevices,
   getSingleDevice,
   editSingleDevice
-} = require("../controllers/userControllers");
+} = require("../controllers/deviceControllers");
 
 const router = express.Router();
 //I have explained most of the syntax in the telemetryRoutes file, there is nothing different here, just additional routes
