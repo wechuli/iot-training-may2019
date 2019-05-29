@@ -1,9 +1,19 @@
-const express = require('express');
+const express = require("express");
+const {} = require('../controllers/userControllers')
 
-const router = express.Router()
+const router = express.Router();
+//I have explained most of the syntax in the telemetryRoutes file, there is nothing different here, just additional routes
 
+//create a new device
+router.post("/createnewdevice", createNewDevice);
 
+//get all devices in the system
+router.get("/getalldevices", getAllDevices);
 
+//get a single device
+router.get("/getsingledevice/:deviceId", getSingleDevice);
 
+//edit a single device
+router.patch("/editdevice/:deviceId", editSingleDevice);
 
 module.exports = router;
