@@ -3,6 +3,12 @@ const helmet = require("helmet");
 const cors = require("cors");
 const morgan = require("morgan");
 const mongoose = require('mongoose');
+const path = require('path');
+
+
+const env = require("dotenv").config({
+  path: path.join(process.env.PWD, ".env")
+});
 
 // We import our custom modules for handling the routes, we create this in the routes folder
 const deviceRoutes = require("./routes/deviceRoutes");
