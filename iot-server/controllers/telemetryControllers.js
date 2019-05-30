@@ -8,10 +8,14 @@
 
 //The try and catch statements just provide a graceful way to handle errors occuring inside the function
 
+
+
 module.exports = {
   //get all telemetry
   async getAllTelemetry(req, res) {
+    
     try {
+
       res.status(200).json({ message: "All telemetry for a device" });
     } catch (error) {
       res.status(500).json({ error });
