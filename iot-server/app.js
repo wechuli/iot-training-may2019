@@ -36,10 +36,10 @@ mongoose
   .connect(process.env.MONGO_CONNSTR, {
     useCreateIndex: true,
     useNewUrlParser: true,
-    auth: {
-      user: process.env.MONGO_USER,
-      password: process.env.MONGO_PASSWORD
-    }
+    // auth: {
+    //   user: process.env.MONGO_USER,
+    //   password: process.env.MONGO_PASSWORD
+    // }
   })
   .then(() => console.log("Connection to MongoDB Successful"))
   .catch(err => console.error(err));
