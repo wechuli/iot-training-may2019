@@ -18,12 +18,8 @@ module.exports = {
       lat: "1.32888"
     };
     try {
-      console.log("I am here");
       const newDevice = new Device(dummyDevice);
-
-      console.log(newDevice);
       await newDevice.save();
-
       res.status(200).json({ message: "Create new device", newDevice });
     } catch (error) {
       res.status(500).json({ error });
