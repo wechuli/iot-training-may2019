@@ -11,7 +11,7 @@ const app = express();
 
 //connect to the db
 mongoose
-  .connect("mongodb+srv://IotUser2019:IotPass2020@cluster0-dcw5o.azure.mongodb.net/test?retryWrites=true&w=majority", {
+  .connect("<MongoURI>", {
     useCreateIndex: true,
     useNewUrlParser: true
   })
