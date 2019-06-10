@@ -7,7 +7,7 @@ const router = express.Router();
 
 router.get("/:devicename", async (req, res) => {
   const name = req.params.devicename;
-  const allTelemetry = await Telemetry.find({ name: name });
+  const allTelemetry = await Telemetry.find({ device: name });
   res.status(200).json(allTelemetry);
 });
 

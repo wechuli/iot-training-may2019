@@ -15,8 +15,8 @@ function dummyDevice() {
     MINIMUM_HUMIDITY;
 
   axios
-    .post("http://un-habitat-backend.azurewebsites.net", {
-      name: "device1",
+    .post("http://localhost:8060/api/telemetry/create", {
+      device: "device1",
       temprature: randomTemp,
       humidity: randomHumi
     })
