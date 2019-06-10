@@ -6,12 +6,17 @@ const router = express.Router();
 
 //create a new user
 router.post("/createnewuser", async (req, res) => {
-
+  const newUser = new User(req.body);
+  await newUser.save();
+  res
+    .status(201)
+    .json({ message: "Successfully created a user", user: newUser });
 });
 
 //get all users in the system
 router.get("/getallusers", async (req, res) => {
-  
+  const allUsers = await User.find({});
+  res.status(200).json({ users: allUsers });
 });
 
 module.exports = router;

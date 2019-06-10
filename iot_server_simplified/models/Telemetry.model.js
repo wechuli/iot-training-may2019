@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const TelemetrySchema = new Schema({
-  name: {
+  device: {
     type: String
   },
   temprature: {
@@ -15,9 +15,6 @@ const TelemetrySchema = new Schema({
   time: {
     type: Date,
     default: Date.now
-  },
-  sensor_id:{
-      type:String
   }
 });
 
