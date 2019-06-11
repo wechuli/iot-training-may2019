@@ -10,7 +10,7 @@ router.post("/createnewuser", async (req, res) => {
   await newUser.save();
   res
     .status(201)
-    .json({ message: "Successfully created a user", user: newUser });
+    .json({ message: "Successfully created a user", "user": newUser });
 });
 
 //get all users in the system

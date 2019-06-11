@@ -27,7 +27,7 @@ app.use(morgan("dev"));
 //connect to the db
 mongoose
   .connect(
-    "mongodb+srv://IoTUSer:mySupersecurepassword2019@iotcluster-nf31a.mongodb.net/iotClass?retryWrites=true&w=majority",
+    "mongodb+srv://Wechuli:IotClass2019@cluster0-i2dnt.mongodb.net/mainDB?retryWrites=true&w=majority",
     {
       useCreateIndex: true,
       useNewUrlParser: true
