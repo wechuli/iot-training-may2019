@@ -20,31 +20,31 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
-# import Adafruit_DHT
+import Adafruit_DHT
 import requests
 import time
 import random
 
 # Sensor should be set to Adafruit_DHT.DHT11,
 # Adafruit_DHT.DHT22, or Adafruit_DHT.AM2302.
-# sensor = Adafruit_DHT.DHT22
+sensor = Adafruit_DHT.DHT22
 
 # Example using a Beaglebone Black with DHT sensor
 # connected to pin P8_11.
-pin = 'P8_11'
+# pin = 'P8_11'
 
 # Example using a Raspberry Pi with DHT sensor
 # connected to GPIO23.
-#pin = 23
+pin = 11
 
 
 while True:
 
     # Try to grab a sensor reading.  Use the read_retry method which will retry up
     # to 15 times to get a sensor reading (waiting 2 seconds between each retry).
-    # humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
-    humidity = random.choice([45,56,334,23])
-    temperature = random.choice([23,23,45,23])
+    humidity, temperature = Adafruit_DHT.read_retry(sensor, pin)
+    # humidity = random.choice([45,56,334,23])
+    # temperature = random.choice([23,23,45,23])
 
     # Note that sometimes you won't get a reading and
     # the results will be null (because Linux can't
