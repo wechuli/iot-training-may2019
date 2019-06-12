@@ -1,0 +1,9 @@
+{
+  "name": "africastalking",
+  "version": "1.0.0",
+  "main": "app.js",
+  "license": "MIT",
+  "dependencies": {
+    "africastalking": "^0.4.0"
+  }
+}
