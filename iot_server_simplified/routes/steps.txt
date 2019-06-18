@@ -1,0 +1,3 @@
+- Display static map on html page
+- fetch data in the browser from your server
+- attach event listener on document loading . the event listener will fetch data as above and populate the map with dynamic values instead of the static values.
