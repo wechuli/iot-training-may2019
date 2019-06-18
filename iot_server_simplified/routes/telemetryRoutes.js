@@ -6,11 +6,14 @@ const router = express.Router();
 //get telemetry for a particular device - remember in the system description the full route is telemetry/:deviceId, but we ommit 'telemetry' since its already covered in the app.js main file which will forward any route with api/telemetry to this handler file
 
 router.get("/:devicename", async (req, res) => {
-  const {start,stop} = req.query;
-  
+  // const {start,stop} = req.query;
+  //,time:{$gte:start,$lte:stop}
+
   const name = req.params.devicename;
-  const allTelemetry = await Telemetry.find({ device: name,time:{$gte:start,$lte:stop} });
-  res.status(200).json({data:allTelemetry});
+  const allTelemetry = await Telemetry.find({ device: name })
+    .sort("-time")
+    .limit(1);
+  res.status(200).json({ data: allTelemetry });
 });
 
 // store a dataset for a particular telemtery - must include the deviceId - you may notice that this route is exaclty equivalent to the get route with the difference of the HTTP method - this is now a POST rather than a get , they have different handler functions
